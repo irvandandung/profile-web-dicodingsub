@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sub Dicoding</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="header">
+		<h1>Website Profil</h1>
+		<div class="menu">
+			<ul>
+				<li><a href="#content1">Tentang</a></li>
+				<li><a href="#content-porto">Portofolio</a></li>
+				<li><a href="#content-contact">Kontak</a></li>
+				<ul>
+				</div>
+			</div>
+
+			<div id="content1" class="content">
+				<center>
+					<h1>Hi, <span class="word"></span></h1>
+					<div class="border-image">
+						<div class="image">
+							<img width="400px" height="400px" src="gambarku.jpg">
+						</div>
+					</div>
+					<div id="content-porto" class="portofolio">
+						<h1>Portofolio</h1>
+						<img height="400px" width="200px;" src="porto1.png">
+						<img height="400px" width="200px;" src="porto2.jpeg">
+					</div>
+					<div id="content-contact" class="contact">
+						<h1>Cari Saya di...</h1>
+						<center>
+							<div class="item1">
+								<div class="item"><a href="https://www.instagram.com/irvandandung/">Instagram</a></div>
+								<div class="item"><a href="https://www.facebook.com/profile.php?id=100014389774623">Facebook</a></div>
+								<div class="item"><a href="https://www.linkedin.com/in/muhamad-irvan-dandung-7b2964167/">Linkedin</a></div>
+							</div>
+							
+							<div class="item"><a href="https://twitter.com/irvandandung">Twitter</a></div>
+							<div class="item"><a href="https://www.dicoding.com/users/294466">Dicoding</a></div>
+						</center>
+					</div>
+				</center>	
+			</div>
+			<div class="footer">
+				<center>
+					<p>&copy; 2019 | <a id="footer-link" href="https://www.enjelhutasoit.com/" target="_blank">Muhamad Irvan Dandung</a></p>
+				</center>
+			</div>
+			<script type="text/javascript">
+				var word = document.querySelector('.word');
+
+				var wordsArray = ['Nama Saya Muhamad Irvan Dandung!', 'Saya lahir di Kebumen', 'Saya berumur 17 tahun', 'Saya Sekarang di Jakarta', 'Saya suka olahraga', 'saya suka kamu,,, eaaa'];
+				var wordsIncrease = 0;
+
+    //for loop by set time out
+    //pass between 2 functions
+    //function call function to infinty loop
+    function showText(){
+    	word.innerText = wordsArray[wordsIncrease];
+    	word.style.opacity = 1;
+    	wordsIncrease++;
+    	setTimeout('hideText()', 1500);
+    }
+    
+    function hideText(){
+    	if(wordsIncrease >= wordsArray.length){
+    		wordsIncrease = 0;
+    	}
+    	word.style.opacity = 0;
+    	setTimeout('showText()', 500);
+    }
+
+    showText();
+</script>
+</body>
+</html>
